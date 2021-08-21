@@ -25,6 +25,7 @@ class Wagon {
     constructor(capacidade){
         this.capacity = capacidade
         this.passengers = []
+        this.isHealthy = false
     }
     getAvailableSeatCount(){
         return this.capacity - this.passengers.length 
@@ -35,12 +36,12 @@ class Wagon {
         }
         return `Ocupados os ${this.passengers.length} assentos vazios`
     }
-    shouldQuarantine(saudavel){
-        if(saudavel == false){
-            return true
-        }else {
-            return false
-        }
+    shouldQuarantine(){
+       if(this.isHealthy == false){
+           return true
+       }else {
+           return false
+       }
     }
     totalFood(){
         let count = 0
