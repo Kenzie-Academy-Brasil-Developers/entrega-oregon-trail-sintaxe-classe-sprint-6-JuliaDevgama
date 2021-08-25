@@ -1,21 +1,29 @@
 class Traveler {
     constructor(nome){
         this.name = nome
-        this.qtdFood = 1
+        this.food = 1
         this.isHealthy = true
     }
+     
+    get food(){
+        return this.food;
+    }
 
+    set food(value) {
+        this.food = value
+    }
+    
     hunt(){
-        let qtd = this.qtdFood += 2
+        let qtd = this.food += 2
         return qtd 
     }
 
     eat(){
-       if(this.qtdFood === 0){
+       if(this.food === 0){
           this.isHealthy = false
           return this.isHealthy
        } else{
-           let qtd = this.qtdFood -=1
+           let qtd = this.food -=1
            return qtd
        }
     }
