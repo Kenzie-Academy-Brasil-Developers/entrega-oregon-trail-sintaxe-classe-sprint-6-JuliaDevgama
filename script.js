@@ -1,16 +1,16 @@
 class Traveler {
     constructor(nome){
         this.name = nome
-        this.food = 1
+        this._food = 1
         this.isHealthy = true
     }
      
     get food(){
-        return this.food;
+        return this._food;
     }
 
     set food(value) {
-        this.food = value
+        this._food = value
     }
     
     hunt(){
